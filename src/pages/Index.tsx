@@ -6,7 +6,6 @@ import {
   HeroSection,
   PricingSection,
   ServicesSection,
-  TrafficSection,
   siteData,
 } from "@/components/sections";
 import { SiteHeader } from "@/components/layout/SiteHeader";
@@ -14,7 +13,6 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 const links = [
   { label: "Início", href: "#inicio" },
   { label: "Sobre", href: "#sobre" },
-  { label: "Tráfego", href: "#trafego" },
   { label: "Serviços", href: "#nossos-servicos" },
   { label: "Preços", href: "#precos" },
   { label: "Contato", href: "#contato" },
@@ -55,7 +53,6 @@ const Index = () => {
       <main className="mx-auto max-w-6xl px-4 py-10">
         <HeroSection onScrollToServices={() => scrollToHash("#nossos-servicos")} />
         <AboutSection />
-        <TrafficSection />
         <ServicesSection />
         <PricingSection />
         <ContactSection />

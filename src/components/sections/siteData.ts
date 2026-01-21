@@ -33,20 +33,6 @@ export const siteData = {
       },
     ],
   },
-  traffic: {
-    title: "Tráfego pago que gera resultado.",
-    subtitle:
-      "Gestão de anúncios com estratégia e dados para escalar com consistência — sem métricas de vaidade.",
-    bullets: [
-      "Gestão de Tráfego Pago (Meta, Google, TikTok)",
-      "Estrutura de funil de vendas",
-      "Otimizações constantes e relatórios",
-    ],
-    ctaLabel: "Falar sobre tráfego",
-    cardTitle: "Performance",
-    cardBody:
-      "Estrutura, criativos e acompanhamento para maximizar retorno e manter previsibilidade.",
-  },
   services: [
     {
       title: "Landing pages",
