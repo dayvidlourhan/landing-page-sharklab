@@ -1,3 +1,5 @@
+import { useLocation } from "react-router-dom";
+
 const links = [
   { label: "Início", href: "#inicio" },
   { label: "Serviços", href: "#nossos-servicos" },
@@ -7,6 +9,9 @@ const links = [
 ];
 
 const Index = () => {
+  const location = useLocation();
+  const currentHash = location.hash || "#inicio";
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-10 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -17,7 +22,15 @@ const Index = () => {
 
           <nav aria-label="Navegação principal" className="hidden gap-6 text-sm md:flex">
             {links.map((l) => (
-              <a key={l.href} href={l.href} className="hover:text-foreground/80">
+              <a
+                key={l.href}
+                href={l.href}
+                className={
+                  l.href === currentHash
+                    ? "font-medium text-foreground"
+                    : "text-foreground/70 hover:text-foreground"
+                }
+              >
                 {l.label}
               </a>
             ))}
@@ -25,7 +38,7 @@ const Index = () => {
         </div>
       </header>
 
-      <main className="mx-auto max-w-6xl px-4 py-10 scroll-smooth">
+      <main className="mx-auto max-w-6xl px-4 py-10">
         <section id="inicio" className="min-h-[40vh] py-12 scroll-mt-20">
           <h1 className="text-2xl font-semibold">Início</h1>
         </section>
