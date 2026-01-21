@@ -18,6 +18,7 @@ describe("Home sections render", () => {
     renderIndex("/#inicio");
 
     expect(document.getElementById("inicio")).toBeTruthy();
+    expect(document.getElementById("trafego-pago")).toBeTruthy();
     expect(document.getElementById("sobre")).toBeTruthy();
     expect(document.getElementById("nossos-servicos")).toBeTruthy();
     expect(document.getElementById("precos")).toBeTruthy();
@@ -45,6 +46,10 @@ describe("Home sections render", () => {
     renderIndex("/#inicio");
 
     expect(screen.getByRole("link", { name: /Início/i })).toHaveAttribute("href", "#inicio");
+    expect(screen.getByRole("link", { name: /Tráfego pago/i })).toHaveAttribute(
+      "href",
+      "#trafego-pago",
+    );
     expect(screen.getByRole("link", { name: /Sobre/i })).toHaveAttribute("href", "#sobre");
     expect(screen.getByRole("link", { name: /Serviços/i })).toHaveAttribute(
       "href",
