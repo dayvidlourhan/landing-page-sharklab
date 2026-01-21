@@ -9,10 +9,10 @@ import {
   ServicesSection,
   siteData,
 } from "@/components/sections";
-import { SiteFooter } from "@/components/layout/SiteFooter";
 
 const Index = () => {
   const location = useLocation();
+  const currentHash = location.hash || "#inicio";
 
   useEffect(() => {
     if (!location.hash) return;
@@ -37,18 +37,6 @@ const Index = () => {
         <PricingSection />
         <ContactSection />
       </main>
-
-      <SiteFooter
-        brand={siteData.brand}
-        links={siteData.nav}
-        onAnchorClick={(href, e) => {
-          // Se clicar no link que já está ativo, força o scroll novamente.
-          if (location.hash === href) {
-            e.preventDefault();
-            scrollToHash(href);
-          }
-        }}
-      />
     </div>
   );
 };
