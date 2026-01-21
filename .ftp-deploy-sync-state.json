@@ -1,0 +1,101 @@
+{
+    "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
+    "version": "1.0.0",
+    "generatedTime": 1768857853056,
+    "data": [
+        {
+            "type": "file",
+            "name": ".htaccess",
+            "size": 214,
+            "hash": "c717ccca6bbd7f3b17f49805b8895fd2fbc5f67fe42cb86afe704f40d310f258"
+        },
+        {
+            "type": "folder",
+            "name": "assets"
+        },
+        {
+            "type": "file",
+            "name": "favicon.ico",
+            "size": 20373,
+            "hash": "dd821076a9b03adc2173c93956226aea3d92482d7578fc4339c5d3a2e9c24586"
+        },
+        {
+            "type": "file",
+            "name": "index.html",
+            "size": 1510,
+            "hash": "3fe05e9d285b09cc888445803c399b557ab2091000f1746bd0f5ae6653455bab"
+        },
+        {
+            "type": "file",
+            "name": "placeholder.svg",
+            "size": 3253,
+            "hash": "64badf7aabda0b9630b87020ffb6095cb858ccbcf66b355c2aa08b1063954d3b"
+        },
+        {
+            "type": "file",
+            "name": "robots.txt",
+            "size": 160,
+            "hash": "a3d27b3ca5ce32341fa9f96f01169b521b1657c05d1860c45d1e53a6258e9e8b"
+        },
+        {
+            "type": "file",
+            "name": "assets/FeaturesSection-Bc7iEmr8.js",
+            "size": 5307,
+            "hash": "ec67b79696d18dc960996cfeb8a8463f8bd9f3e1a5496b5bff1330546361448e"
+        },
+        {
+            "type": "file",
+            "name": "assets/GrowthSection-CAU7pyCB.js",
+            "size": 381633,
+            "hash": "86e11fae9b0e3c9f4a001939bf00c36dd7826a5c2f21d7dd7c80a839b81fe0c9"
+        },
+        {
+            "type": "file",
+            "name": "assets/PricingSection-ZrYfWQ8c.js",
+            "size": 6825,
+            "hash": "c9f7d06c3484bc5593d7be9a920d599787cd9edd024dd5ffc724b5195c78f316"
+        },
+        {
+            "type": "file",
+            "name": "assets/ServicesSection-889UmfSo.js",
+            "size": 7881,
+            "hash": "f4e2adfe1a1302a8c3c31c2d87335f8d1a6885db25d2777b233feac4dc029028"
+        },
+        {
+            "type": "file",
+            "name": "assets/TestimonialsCarousel-7XwKQ6jP.js",
+            "size": 3933,
+            "hash": "75b279def523cdf79cac40cd51e6338992ecea4942df920ee8ff5249f4a5740d"
+        },
+        {
+            "type": "file",
+            "name": "assets/check-CzW_6qhe.js",
+            "size": 288,
+            "hash": "db72e8da664af6d688990fbe52066319252af43ad7eebe24806eee26fde91ac7"
+        },
+        {
+            "type": "file",
+            "name": "assets/index-2pPHW7YN.css",
+            "size": 87197,
+            "hash": "76aedc167e82fe663ca39ea8e425a85a58217a3a8f760f3081f7812d7e43f1ee"
+        },
+        {
+            "type": "file",
+            "name": "assets/index-Xgi_VPlI.js",
+            "size": 518683,
+            "hash": "f7b6142f2c33b27c37175a5ef47ab3c7eea064ab456feb71ecf07bd9e6d5a1fc"
+        },
+        {
+            "type": "file",
+            "name": "assets/service-image--JmVGTvH.jpg",
+            "size": 9022,
+            "hash": "398914de604b6e1b5b8ead526e5841435b1667cf416c1ba13d21f2080f7d1b86"
+        },
+        {
+            "type": "file",
+            "name": "assets/usePerspectiveScroll-CNL2zTax.js",
+            "size": 115871,
+            "hash": "50b8775416c54c1fc8f49f84ab99eeaca16fecfe9a452d26d6bcd2c295cc45dd"
+        }
+    ]
+}

@@ -1,5 +1,16 @@
 const Index = () => {
-  return <main className="min-h-screen bg-background" aria-label="Página em branco" />;
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-background">
+      <div className="text-center space-y-4">
+        <h1 className="text-4xl font-semibold text-foreground">
+          Projeto em Branco
+        </h1>
+        <p className="text-muted-foreground">
+          Pronto para começar a construir
+        </p>
+      </div>
+    </div>
+  );
 };
 
 export default Index;
