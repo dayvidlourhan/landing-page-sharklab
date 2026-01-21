@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 const links = [
@@ -12,11 +13,33 @@ const Index = () => {
   const location = useLocation();
   const currentHash = location.hash || "#inicio";
 
+  useEffect(() => {
+    if (!location.hash) return;
+    const id = decodeURIComponent(location.hash.replace("#", ""));
+    const el = document.getElementById(id);
+    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [location.hash]);
+
+  const scrollToHash = (hash: string) => {
+    const id = decodeURIComponent(hash.replace("#", ""));
+    const el = document.getElementById(id);
+    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="sticky top-0 z-10 border-b bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
-          <a href="#inicio" className="text-sm font-semibold tracking-[0.18em]">
+          <a
+            href="#inicio"
+            className="text-sm font-semibold tracking-[0.18em]"
+            onClick={(e) => {
+              if (location.hash === "#inicio") {
+                e.preventDefault();
+                scrollToHash("#inicio");
+              }
+            }}
+          >
             SHARKLAB
           </a>
 
@@ -25,6 +48,13 @@ const Index = () => {
               <a
                 key={l.href}
                 href={l.href}
+                onClick={(e) => {
+                  // Se clicar no link que já está ativo, força o scroll novamente.
+                  if (location.hash === l.href) {
+                    e.preventDefault();
+                    scrollToHash(l.href);
+                  }
+                }}
                 className={
                   l.href === currentHash
                     ? "font-medium text-foreground"
