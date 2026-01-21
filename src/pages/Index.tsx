@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { HeroSection } from "@/components/sections/HeroSection";
+import { AboutSection } from "@/components/sections/AboutSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { PricingSection } from "@/components/sections/PricingSection";
 import { ContactSection } from "@/components/sections/ContactSection";
@@ -8,6 +9,7 @@ import { siteData } from "@/components/sections/siteData";
 
 const links = [
   { label: "Início", href: "#inicio" },
+  { label: "Sobre", href: "#sobre" },
   { label: "Serviços", href: "#nossos-servicos" },
   { label: "Preços", href: "#precos" },
   { label: "Contato", href: "#contato" },
@@ -74,6 +76,7 @@ const Index = () => {
 
       <main className="mx-auto max-w-6xl px-4 py-10">
         <HeroSection onScrollToServices={() => scrollToHash("#nossos-servicos")} />
+        <AboutSection />
         <ServicesSection />
         <PricingSection />
         <ContactSection />

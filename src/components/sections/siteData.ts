@@ -11,6 +11,28 @@ export const siteData = {
     subtitle:
       "Uma presença online com design sólido, performance e experiência fluida — do primeiro scroll ao contato.",
   },
+  about: {
+    title: "Sobre",
+    subtitle:
+      "A gente combina estratégia, execução e foco em resultado para tirar seu negócio do comum — com um processo simples e transparente.",
+    pillars: [
+      {
+        title: "Estratégia",
+        description:
+          "Entendemos seu objetivo, público e oferta antes de desenhar a página.",
+      },
+      {
+        title: "Execução",
+        description:
+          "Design limpo, componentes consistentes e performance desde o primeiro build.",
+      },
+      {
+        title: "Resultados",
+        description:
+          "CTA claro, navegação por âncoras e conteúdo orientado a conversão.",
+      },
+    ],
+  },
   services: [
     {
       title: "Landing pages",
