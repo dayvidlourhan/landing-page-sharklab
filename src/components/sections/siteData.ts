@@ -1,5 +1,13 @@
 export const siteData = {
   brand: "SHARKLAB",
+  nav: [
+    { label: "Início", href: "#inicio" },
+    { label: "Tráfego pago", href: "#trafego-pago" },
+    { label: "Sobre", href: "#sobre" },
+    { label: "Serviços", href: "#nossos-servicos" },
+    { label: "Preços", href: "#precos" },
+    { label: "Contato", href: "#contato" },
+  ],
   whatsapp: {
     // TODO: troque pelo número real no formato E.164 sem + (ex.: 5511999999999)
     phoneE164NoPlus: "5599999999999",
