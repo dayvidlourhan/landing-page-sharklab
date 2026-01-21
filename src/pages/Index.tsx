@@ -1,6 +1,6 @@
 const links = [
   { label: "Início", href: "#inicio" },
-  { label: "Serviços", href: "#servicos" },
+  { label: "Serviços", href: "#nossos-servicos" },
   { label: "Sobre", href: "#sobre" },
   { label: "Preços", href: "#precos" },
   { label: "Contato", href: "#contato" },
@@ -29,8 +29,8 @@ const Index = () => {
         <section id="inicio" className="min-h-[40vh] py-12">
           <h1 className="text-2xl font-semibold">Início</h1>
         </section>
-        <section id="servicos" className="min-h-[40vh] py-12">
-          <h2 className="text-xl font-semibold">Serviços</h2>
+        <section id="nossos-servicos" className="min-h-[40vh] py-12">
+          <h2 className="text-xl font-semibold">Nossos Serviços</h2>
         </section>
         <section id="sobre" className="min-h-[40vh] py-12">
           <h2 className="text-xl font-semibold">Sobre</h2>
