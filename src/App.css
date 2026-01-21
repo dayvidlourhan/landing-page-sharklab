@@ -1,0 +1,4 @@
+/* Keep this file minimal; global styling lives in src/index.css and Tailwind. */
+#root {
+  min-height: 100vh;
+}
