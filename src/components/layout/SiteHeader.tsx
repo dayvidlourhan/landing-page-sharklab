@@ -4,7 +4,7 @@ type LinkItem = { label: string; href: string };
 
 type Props = {
   brand: string;
-  links: LinkItem[];
+  links: readonly LinkItem[];
   currentHash: string;
   onAnchorClick: (href: string, e: MouseEvent<HTMLAnchorElement>) => void;
 };

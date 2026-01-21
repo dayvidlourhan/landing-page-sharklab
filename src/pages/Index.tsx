@@ -11,15 +11,6 @@ import {
 } from "@/components/sections";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 
-const links = [
-  { label: "Início", href: "#inicio" },
-  { label: "Tráfego pago", href: "#trafego-pago" },
-  { label: "Sobre", href: "#sobre" },
-  { label: "Serviços", href: "#nossos-servicos" },
-  { label: "Preços", href: "#precos" },
-  { label: "Contato", href: "#contato" },
-];
-
 const Index = () => {
   const location = useLocation();
   const currentHash = location.hash || "#inicio";
@@ -41,7 +32,7 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader
         brand={siteData.brand}
-        links={links}
+        links={siteData.nav}
         currentHash={currentHash}
         onAnchorClick={(href, e) => {
           // Se clicar no link que já está ativo, força o scroll novamente.
