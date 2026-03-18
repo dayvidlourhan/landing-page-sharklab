@@ -10,7 +10,7 @@ export const siteData = {
   ],
   whatsapp: {
     // TODO: troque pelo número real no formato E.164 sem + (ex.: 5511999999999)
-    phoneE164NoPlus: "5599999999999",
+    phoneE164NoPlus: "5562981939260",
     defaultMessage: "Olá! Quero um orçamento.",
   },
   hero: {

@@ -3,7 +3,9 @@
 ## [Unreleased]
 
 ### ✨ Features (Adicionado)
+- [Footer] Atualização dos links sociais: mantido apenas Instagram e adicionado WhatsApp utilizando o SVG oficial fornecido, com escalas e cores corrigidas para o tema.
 - [Footer] Atualização das informações de contato (e-mail, telefone, localização) realizada via "DOM Patching" no `index.html`, garantindo que os dados sejam alterados sem modificar o layout e o design original dos assets pré-compilados.
+- [siteData] Atualização do número de WhatsApp para (62) 98193-9260.
 
 ### ♻️ Refactor (Alterado/Melhorado)
 - [Rollback] Reversão das alterações estruturais no `Index.tsx` e `index.html` para restaurar fielmente o design e a performance dos assets originais, atendendo ao pedido de manter o site sem refatorações indesejadas.
