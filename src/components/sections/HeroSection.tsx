@@ -26,7 +26,7 @@ export function HeroSection({ onScrollToServices }: Props) {
           <div className="mt-7 flex flex-wrap items-center gap-3">
             <Button asChild>
               <a href={waLink} target="_blank" rel="noreferrer">
-                Falar no WhatsApp
+                Agendar Diagnóstico
               </a>
             </Button>
             <Button variant="secondary" onClick={onScrollToServices}>

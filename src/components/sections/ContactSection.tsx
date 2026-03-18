@@ -32,7 +32,7 @@ export function ContactSection() {
             <div className="mt-4">
               <Button asChild>
                 <a href={waLink} target="_blank" rel="noreferrer">
-                  Abrir conversa
+                  FALAR COM A SHARKLAB
                 </a>
               </Button>
             </div>

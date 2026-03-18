@@ -11,7 +11,7 @@ export const siteData = {
   whatsapp: {
     // TODO: troque pelo número real no formato E.164 sem + (ex.: 5511999999999)
     phoneE164NoPlus: "5562981939260",
-    defaultMessage: "Olá! Quero um orçamento.",
+    defaultMessage: "",
   },
   hero: {
     eyebrow: "Studio digital",
@@ -57,23 +57,64 @@ export const siteData = {
   ],
   pricing: [
     {
-      name: "Essencial",
-      priceNote: "a partir de",
-      price: "R$ 1.490",
-      features: ["1 página (landing)", "Design responsivo", "CTA para WhatsApp"],
+      name: "Shark Start",
+      priceNote: "/mês",
+      price: "R$ 1.800",
+      features: [
+        "Planejamento estratégico mensal",
+        "Gestão de 1 rede social",
+        "Conteúdo estratégico (feed + stories)",
+        "Artes institucionais",
+        "Copywriting básico",
+        "Relatório mensal simples"
+      ],
+      buttonText: "Começar Agora",
     },
     {
-      name: "Institucional",
-      priceNote: "a partir de",
-      price: "R$ 2.990",
-      features: ["Até 5 seções", "Animações leves", "Otimização básica"],
+      name: "Shark Growth",
+      priceNote: "/mês",
+      price: "R$ 2.500",
+      features: [
+        "Estratégia de marketing completa",
+        "Gestão de até 2 redes sociais",
+        "Conteúdo estratégico em vídeo",
+        "Design + copy profissional",
+        "Gestão de tráfego pago (Meta Ads)",
+        "Estrutura de funil",
+        "Relatório mensal detalhado"
+      ],
       highlight: true,
+      buttonText: "Escolher Growth",
     },
     {
-      name: "Sob medida",
-      priceNote: "vamos conversar",
-      price: "Custom",
-      features: ["Escopo flexível", "Integrações", "Evolução contínua"],
+      name: "Shark Scale",
+      priceNote: "/mês",
+      price: "R$ 4.000",
+      features: [
+        "Estratégia avançada",
+        "Gestão completa de redes sociais",
+        "Produção profissional de vídeos",
+        "Conteúdo para anúncios e institucionais",
+        "Gestão de tráfego (Meta + Google Ads)",
+        "Otimizações constantes",
+        "Relatórios estratégicos",
+        "Suporte prioritário"
+      ],
+      buttonText: "Escalar Agora",
+    },
+    {
+      name: "Shark Custom",
+      priceNote: "Valor definido conforme escopo",
+      price: "Sob orçamento",
+      features: [
+        "TikTok Ads",
+        "Campanhas específicas",
+        "Lançamentos",
+        "Produções audiovisuais especiais",
+        "Captação presencial",
+        "Consultoria estratégica"
+      ],
+      buttonText: "Falar com a SharkLab",
     },
   ],
   contact: {
@@ -83,7 +124,8 @@ export const siteData = {
   },
 } as const;
 
-export const buildWhatsAppLink = (phone: string, message: string) => {
+export const buildWhatsAppLink = (phone: string, message?: string) => {
+  if (!message) return `https://wa.me//${phone}`;
   const text = encodeURIComponent(message);
-  return `https://wa.me/${phone}?text=${text}`;
+  return `https://wa.me//${phone}?text=${text}`;
 };

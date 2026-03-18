@@ -19,7 +19,7 @@ export function PricingSection() {
         </p>
       </header>
 
-      <div className="mt-8 grid gap-4 md:grid-cols-3">
+      <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         {siteData.pricing.map((p) => (
           <Card
             key={p.name}
@@ -54,7 +54,7 @@ export function PricingSection() {
             <CardFooter>
               <Button asChild className="w-full">
                 <a href={waLink} target="_blank" rel="noreferrer">
-                  Pedir orçamento
+                  {"buttonText" in p ? (p as any).buttonText : "Pedir orçamento"}
                 </a>
               </Button>
             </CardFooter>
