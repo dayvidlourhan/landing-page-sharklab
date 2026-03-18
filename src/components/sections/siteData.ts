@@ -76,6 +76,11 @@ export const siteData = {
       features: ["Escopo flexível", "Integrações", "Evolução contínua"],
     },
   ],
+  contact: {
+    email: "agencysharklab@gmail.com",
+    phone: "+55 (62) 98193-9260",
+    address: "Goiânia, GO - Brasil",
+  },
 } as const;
 
 export const buildWhatsAppLink = (phone: string, message: string) => {

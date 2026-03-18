@@ -30,7 +30,7 @@ de verdade">
   <script type="module" crossorigin src="/assets/index-Xgi_VPlI.js"></script>
   <link rel="stylesheet" crossorigin href="/assets/index-2pPHW7YN.css">
   <script>
-    // Sistema de Navegação para Assets Pré-compilados
+    // Sistema de Navegação e Atualização de Dados para Assets Pré-compilados
     document.addEventListener("DOMContentLoaded", () => {
       const applyNavigationIds = () => {
         const sections = document.querySelectorAll('section');
@@ -52,10 +52,20 @@ de verdade">
         if (footer) {
           footer.id = "contato";
           footer.style.scrollMarginTop = "80px";
+          
+          // Patches de Dados no Footer (sem mudar o layout original)
+          const footerHtml = footer.innerHTML;
+          if (footerHtml.includes("contato@sharklab.com.br") || footerHtml.includes("+55 (11) 99999-9999")) {
+            footer.innerHTML = footer.innerHTML
+              .replace(/contato@sharklab\.com\.br/g, "agencysharklab@gmail.com")
+              .replace(/\+55 \(11\) 99999-9999/g, "+55 (62) 98193-9260")
+              .replace(/São Paulo, SP - Brasil/g, "Goiânia, GO - Brasil")
+              .replace(/contato@sharklab\.com\.br/g, "agencysharklab@gmail.com");
+          }
         }
       };
-
-      // Função de Scroll Suave Manual
+      
+      // ... resto do script de scroll permanece ...
       const performSmoothScroll = (hash) => {
         if (!hash || hash === "#" || hash === "/") return;
         const id = hash.replace(/^#\/?/, "");
@@ -69,39 +79,31 @@ de verdade">
 
       // Inicialização
       applyNavigationIds();
-      // Reaplica IDs algumas vezes para garantir que o React terminou de renderizar
       [100, 500, 1000, 2000].forEach(t => setTimeout(applyNavigationIds, t));
 
-      // Captura cliques em links de âncora
       document.addEventListener("click", (e) => {
         const link = e.target.closest("a");
         if (!link) return;
-
-        // Caso especial para link de "Início" ou Logo (geralmente href="/" ou "#")
         const isHomeLink = link.getAttribute("href") === "/" || link.getAttribute("href") === "#" || link.hash === "#inicio";
-        
         if (isHomeLink && (link.pathname === window.location.pathname || link.pathname === "/")) {
           window.scrollTo({ top: 0, behavior: "smooth" });
           window.history.pushState(null, "", "/");
           e.preventDefault();
           return;
         }
-
         if (link.hash && (link.pathname === window.location.pathname || link.pathname === "/")) {
           if (performSmoothScroll(link.hash)) {
-            // Se conseguimos scrollar, atualizamos o URL sem recarregar
             window.history.pushState(null, "", link.hash);
             e.preventDefault();
           }
         }
       });
-
-      // Scroll inicial se houver hash na URL
       if (window.location.hash) {
         setTimeout(() => performSmoothScroll(window.location.hash), 1500);
       }
     });
   </script>
+
 </head>
 
   <body>

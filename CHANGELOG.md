@@ -3,14 +3,10 @@
 ## [Unreleased]
 
 ### ✨ Features (Adicionado)
-- [Setup] Implementado script de injeção de IDs e scroll suave no `index.html` para restaurar a funcionalidade da navbar nos assets pré-compilados.
-- [Header] Corrigida a navegação do link "Início" para realizar rolagem suave até o topo da página.
-
-### 🐛 Fix (Corrigido)
-- [Setup] Correção do `index.html` para apontar para o código fonte (`src/main.tsx`) em vez de arquivos de build estáticos, resolvendo o problema de sincronização de código no ambiente de desenvolvimento.
+- [Footer] Atualização das informações de contato (e-mail, telefone, localização) realizada via "DOM Patching" no `index.html`, garantindo que os dados sejam alterados sem modificar o layout e o design original dos assets pré-compilados.
 
 ### ♻️ Refactor (Alterado/Melhorado)
-- [Index] Integração do `SiteHeader` na página principal e centralização da lógica de scroll.
+- [Rollback] Reversão das alterações estruturais no `Index.tsx` e `index.html` para restaurar fielmente o design e a performance dos assets originais, atendendo ao pedido de manter o site sem refatorações indesejadas.
 
 ### 🛠️ Chore (Ferramentas/Setup)
 

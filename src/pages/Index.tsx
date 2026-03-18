@@ -12,7 +12,6 @@ import {
 
 const Index = () => {
   const location = useLocation();
-  const currentHash = location.hash || "#inicio";
 
   useEffect(() => {
     if (!location.hash) return;
@@ -42,5 +41,3 @@ const Index = () => {
 };
 
 export default Index;
-
-
